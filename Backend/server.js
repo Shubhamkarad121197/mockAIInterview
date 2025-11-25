@@ -1,0 +1,12 @@
+import express from  'express';
+import {ENV} from './src/lib/env.js'
+
+const app=express()
+
+app.get('/',(req,res)=>{
+    res.status(200).json({msg:'Success from API'})
+})
+
+app.listen(ENV.PORT,()=>{
+    console.log(`Server is running ${ENV.PORT}` )
+})
